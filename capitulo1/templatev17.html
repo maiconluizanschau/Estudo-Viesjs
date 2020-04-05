@@ -1,0 +1,37 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+    <p>Contador: {{ contador}}</p>
+<!--
+    <button v-on:click="somar">somar</button>
+-->
+<!--declaracao e a  mesma coisa da superior-->
+    <button @click="somar">somar</button>
+    <!---
+  <input type="text" v-bind:value="contador">
+    -->
+<!--posso declarar assim como em cima-->
+  <input type="text" :value="contador">
+  
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            contador:0,
+           
+        },
+        methods:{
+            somar(){
+                this.contador++
+            //    this.resultado=this.contador>=5?
+              //  'maior ou igual a 5':'Menor que 5'
+            },
+           
+            }
+ 
+        
+
+    })
+</script>

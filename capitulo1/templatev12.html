@@ -1,0 +1,27 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+    <p>{{ contador * 2 }}</p>
+    <p>{{ contador  }}</p>
+    <p>{{ contador >10 ?'maior que 10': 'Menor que 10' }}</p>
+    <button v-on:click="somar()"> Somar 1</button>    
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            contador: '0'
+        },
+        methods: {
+            somar() {
+               console.log()
+                this.contador++
+            }
+            
+           
+           
+        }
+
+    })
+</script>
